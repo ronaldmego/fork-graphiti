@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(git reset:*)",
+      "Bash(git commit -S -m \"$(cat <<''EOF''\nfix: Replace non-existent model names and handle Neo4j index race condition\n\n- Replace hardcoded non-existent models (gpt-5-mini, gpt-5-nano, gpt-4.1) \n  with valid gpt-4o-mini across config files and default client\n- Add exception handling for EquivalentSchemaRuleAlreadyExists in \n  Neo4j index creation to prevent race condition failures on startup\nEOF\n)\")",
+      "Bash(git cat-file:*)",
+      "Bash(git push:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
